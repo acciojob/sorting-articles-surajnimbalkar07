@@ -1,1 +1,49 @@
-/*  your css code here. If applicable */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+    min-height: 100vh;   /* 🔥 FIX: background now expands */
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+
+    background-color: rgba(0, 0, 0, 0.1);
+    background-blend-mode: darken;
+}
+
+#band {
+    width: 450px;
+    max-width: 90%;
+    list-style: none;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.97);
+    border-radius: 6px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.15);
+}
+
+#band li {
+    padding: 18px 25px;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    white-space: normal;    /* 🔥 text wrap fix */
+    word-wrap: break-word;  /* 🔥 fix long text overflow */
+}
+
+#band li:last-child {
+    border-bottom: none;
+}
+
+#band li::before {
+    content: "▪";
+    font-size: 18px;
+}
